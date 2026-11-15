@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cours | FitZone</title>
+  <meta name="description" content="Planning des cours collectifs FitZone : cardio, renforcement et bien-être.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/filter.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html"><img src="../img/logo.svg" alt="" width="34" height="34">FitZone</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigation principale">
+        <ul class="menu" id="menu">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html" aria-current="page">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="page-title">
+      <div class="container">
+        <h1>Planning des cours</h1>
+        <p>Filtre les séances et réserve ta place en un clic (sauvegarde automatique).</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <form class="filters" action="#" onsubmit="return false" aria-label="Filtrer le planning">
+          <div class="field"><label for="q">Rechercher un cours ou un coach</label><input id="q" type="search" data-search placeholder="Yoga, Karim..."></div>
+          <div class="field"><label for="jour">Jour</label>
+            <select id="jour" data-filter="jour"><option value="">Tous</option><option>Lundi</option><option>Mardi</option><option>Mercredi</option><option>Jeudi</option><option>Vendredi</option><option>Samedi</option></select></div>
+          <div class="field"><label for="type">Type</label>
+            <select id="type" data-filter="type"><option value="">Tous</option><option>Cardio</option><option>Renforcement</option><option>Bien-être</option></select></div>
+        </form>
+        <p class="result" id="result-count" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table>
+            <caption>Planning de la semaine type</caption>
+            <thead><tr><th scope="col">Jour</th><th scope="col">Heure</th><th scope="col">Cours</th><th scope="col">Type</th><th scope="col">Niveau</th><th scope="col">Coach</th></tr></thead>
+            <tbody>
+              <tr class="filterable" data-jour="Lundi" data-type="Cardio"><td>Lundi</td><td>12:15</td><td>Cardio Express</td><td>Cardio</td><td>Tous niveaux</td><td>Sarah</td></tr>
+              <tr class="filterable" data-jour="Lundi" data-type="Renforcement"><td>Lundi</td><td>18:30</td><td>Body Pump</td><td>Renforcement</td><td>Intermédiaire</td><td>Karim</td></tr>
+              <tr class="filterable" data-jour="Mardi" data-type="Bien-être"><td>Mardi</td><td>07:00</td><td>Yoga réveil</td><td>Bien-être</td><td>Débutant</td><td>Inès</td></tr>
+              <tr class="filterable" data-jour="Mardi" data-type="Cardio"><td>Mardi</td><td>19:00</td><td>Boxe fitness</td><td>Cardio</td><td>Intermédiaire</td><td>Malik</td></tr>
+              <tr class="filterable" data-jour="Mercredi" data-type="Renforcement"><td>Mercredi</td><td>12:30</td><td>Abdos Flash</td><td>Renforcement</td><td>Tous niveaux</td><td>Sarah</td></tr>
+              <tr class="filterable" data-jour="Mercredi" data-type="Cardio"><td>Mercredi</td><td>18:45</td><td>Cycle Intense</td><td>Cardio</td><td>Avancé</td><td>Julien</td></tr>
+              <tr class="filterable" data-jour="Jeudi" data-type="Bien-être"><td>Jeudi</td><td>08:00</td><td>Pilates</td><td>Bien-être</td><td>Débutant</td><td>Inès</td></tr>
+              <tr class="filterable" data-jour="Jeudi" data-type="Renforcement"><td>Jeudi</td><td>19:30</td><td>Cross Training</td><td>Renforcement</td><td>Avancé</td><td>Karim</td></tr>
+              <tr class="filterable" data-jour="Vendredi" data-type="Bien-être"><td>Vendredi</td><td>12:15</td><td>Stretching</td><td>Bien-être</td><td>Tous niveaux</td><td>Inès</td></tr>
+              <tr class="filterable" data-jour="Vendredi" data-type="Cardio"><td>Vendredi</td><td>18:00</td><td>Zumba</td><td>Cardio</td><td>Tous niveaux</td><td>Léa</td></tr>
+              <tr class="filterable" data-jour="Samedi" data-type="Renforcement"><td>Samedi</td><td>10:00</td><td>Body Pump</td><td>Renforcement</td><td>Intermédiaire</td><td>Karim</td></tr>
+              <tr class="filterable" data-jour="Samedi" data-type="Bien-être"><td>Samedi</td><td>11:15</td><td>Yoga flow</td><td>Bien-être</td><td>Intermédiaire</td><td>Inès</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="empty" hidden>Aucun cours ne correspond à ta recherche.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 FitZone, projet pédagogique EFREI TI504N. Clubs, prix et chiffres fictifs.</p>
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

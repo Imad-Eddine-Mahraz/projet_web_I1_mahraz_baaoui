@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clubs | FitZone</title>
+  <meta name="description" content="Trouve le club FitZone le plus proche de chez toi.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/filter.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html"><img src="../img/logo.svg" alt="" width="34" height="34">FitZone</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigation principale">
+        <ul class="menu" id="menu">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html" aria-current="page">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="page-title">
+      <div class="container">
+        <h1>Trouve ton club</h1>
+        <p>Recherche par nom, filtre par ville ou par horaires.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <form class="filters" action="#" onsubmit="return false" aria-label="Filtrer les clubs">
+          <div class="field"><label for="q">Rechercher</label><input id="q" type="search" data-search placeholder="Nom, équipement..."></div>
+          <div class="field"><label for="ville">Ville</label>
+            <select id="ville" data-filter="ville"><option value="">Toutes</option><option>Paris</option><option>Lyon</option><option>Marseille</option><option>Lille</option><option>Bordeaux</option></select></div>
+          <div class="field"><label for="h24">Horaires</label>
+            <select id="h24" data-filter="h24"><option value="">Tous</option><option value="oui">Ouvert 24/7</option><option value="non">6 h - 23 h</option></select></div>
+        </form>
+        <p class="result" id="result-count" aria-live="polite"></p>
+        <div class="grid">
+          <article class="card filterable" data-ville="Paris" data-h24="oui">
+            <img class="card-img" src="../img/slide-24h.svg" alt="Salle de musculation Paris Oberkampf">
+            <span class="badge">Ouvert 24/7</span>
+            <h3>Paris 11e - Oberkampf</h3>
+            <ul class="club-meta"><li>Département : Paris</li><li>Surface : 1 200 m²</li><li>Plateau musculation, cardio, 2 studios de cours</li></ul>
+            <a class="btn btn--blue" href="contact.html?sujet=essai&info=Club+Paris+11e+-+Oberkampf">Essayer ce club</a>
+          </article>
+          <article class="card filterable" data-ville="Paris" data-h24="non">
+            <img class="card-img" src="../img/slide-cours.svg" alt="Espace cardio Paris Convention">
+            <span class="badge badge--blue">6 h - 23 h</span>
+            <h3>Paris 15e - Convention</h3>
+            <ul class="club-meta"><li>Département : Paris</li><li>Surface : 900 m²</li><li>Machines guidées, cardio, espace stretching</li></ul>
+            <a class="btn btn--blue" href="contact.html?sujet=essai&info=Club+Paris+15e+-+Convention">Essayer ce club</a>
+          </article>
+          <article class="card filterable" data-ville="Lyon" data-h24="oui">
+            <img class="card-img" src="../img/slide-muscu.svg" alt="Plateau libre Lyon Part-Dieu">
+            <span class="badge">Ouvert 24/7</span>
+            <h3>Lyon - Part-Dieu</h3>
+            <ul class="club-meta"><li>Département : Rhône</li><li>Surface : 1 500 m²</li><li>Racks, haltères jusqu'à 60 kg, studio vélo</li></ul>
+            <a class="btn btn--blue" href="contact.html?sujet=essai&info=Club+Lyon+-+Part-Dieu">Essayer ce club</a>
+          </article>
+          <article class="card filterable" data-ville="Marseille" data-h24="oui">
+            <img class="card-img" src="../img/slide-24h.svg" alt="Espace cross-training Marseille Prado">
+            <span class="badge">Ouvert 24/7</span>
+            <h3>Marseille - Prado</h3>
+            <ul class="club-meta"><li>Département : Bouches-du-Rhône</li><li>Surface : 1 100 m²</li><li>Cardio, musculation, cross-training</li></ul>
+            <a class="btn btn--blue" href="contact.html?sujet=essai&info=Club+Marseille+-+Prado">Essayer ce club</a>
+          </article>
+          <article class="card filterable" data-ville="Lille" data-h24="non">
+            <img class="card-img" src="../img/slide-cours.svg" alt="Studio de cours Lille Flandres">
+            <span class="badge badge--blue">6 h - 23 h</span>
+            <h3>Lille - Flandres</h3>
+            <ul class="club-meta"><li>Département : Nord</li><li>Surface : 800 m²</li><li>Machines guidées, studio de cours</li></ul>
+            <a class="btn btn--blue" href="contact.html?sujet=essai&info=Club+Lille+-+Flandres">Essayer ce club</a>
+          </article>
+          <article class="card filterable" data-ville="Bordeaux" data-h24="oui">
+            <img class="card-img" src="../img/slide-muscu.svg" alt="Salle FitZone Bordeaux Chartrons">
+            <span class="badge">Ouvert 24/7</span>
+            <h3>Bordeaux - Chartrons</h3>
+            <ul class="club-meta"><li>Département : Gironde</li><li>Surface : 1 000 m²</li><li>Plateau libre, cardio, espace femmes</li></ul>
+            <a class="btn btn--blue" href="contact.html?sujet=essai&info=Club+Bordeaux+-+Chartrons">Essayer ce club</a>
+          </article>
+        </div>
+        <p id="empty" hidden>Aucun club ne correspond. Essaie avec moins de filtres.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 FitZone, projet pédagogique EFREI TI504N. Clubs, prix et chiffres fictifs.</p>
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

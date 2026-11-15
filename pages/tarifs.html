@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarifs | FitZone</title>
+  <meta name="description" content="Abonnements FitZone à partir de 19,99 euros par mois, sans engagement.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/tarifs.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html"><img src="../img/logo.svg" alt="" width="34" height="34">FitZone</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigation principale">
+        <ul class="menu" id="menu">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html" aria-current="page">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="page-title">
+      <div class="container">
+        <h1>Nos abonnements</h1>
+        <p>Trois formules, un seul principe : tu paies ce que tu utilises.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container grid">
+        <article class="card price-card reveal"><h2>Essentiel</h2><p class="price">19,99 € <small>/mois</small></p>
+          <ul><li>1 club au choix</li><li>Machines et plateau libre</li><li>Cours en supplément</li></ul><a class="btn btn--blue" href="contact.html?sujet=abonnement&info=Formule+Essentiel+(19,99+€/mois)">Choisir Essentiel</a></article>
+        <article class="card price-card price-card--hot reveal"><span class="badge">Le plus choisi</span><h2>Premium</h2><p class="price">29,99 € <small>/mois</small></p>
+          <ul><li>Tous les clubs du réseau</li><li>Cours collectifs illimités</li><li>1 invité par mois</li></ul><a class="btn" href="contact.html?sujet=abonnement&info=Formule+Premium+(29,99+€/mois)">Choisir Premium</a></article>
+        <article class="card price-card reveal"><h2>Ultimate</h2><p class="price">39,99 € <small>/mois</small></p>
+          <ul><li>Tout Premium</li><li>Bilan coach chaque trimestre</li><li>Accès 24/7 et espace récupération</li></ul><a class="btn btn--blue" href="contact.html?sujet=abonnement&info=Formule+Ultimate+(39,99+€/mois)">Choisir Ultimate</a></article>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <h2>Comparer les formules</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Ce qui est inclus dans chaque formule</caption>
+            <thead><tr><th scope="col">Avantage</th><th scope="col">Essentiel</th><th scope="col">Premium</th><th scope="col">Ultimate</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Accès à tous les clubs</th><td class="no">Non</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
+              <tr><th scope="row">Cours collectifs</th><td class="no">En option</td><td class="yes">Illimités</td><td class="yes">Illimités</td></tr>
+              <tr><th scope="row">Invité</th><td class="no">Non</td><td class="yes">1 par mois</td><td class="yes">2 par mois</td></tr>
+              <tr><th scope="row">Accès 24/7</th><td class="no">Non</td><td class="no">Non</td><td class="yes">Oui</td></tr>
+              <tr><th scope="row">Bilan coach</th><td class="no">Non</td><td class="no">À l'inscription</td><td class="yes">Chaque trimestre</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <form id="simulateur" action="#" onsubmit="return false" aria-label="Simulateur de prix">
+          <h2>Simule ton prix</h2>
+          <div class="field"><label for="formule">Formule</label>
+            <select id="formule" name="formule"><option value="essentiel">Essentiel</option><option value="premium" selected>Premium</option><option value="ultimate">Ultimate</option></select></div>
+          <fieldset><legend>Engagement</legend>
+            <div class="inline"><label><input type="radio" name="duree" value="0" checked> Sans engagement</label><label><input type="radio" name="duree" value="12"> 12 mois (-10 %)</label></div></fieldset>
+          <fieldset><legend>Options</legend>
+            <div class="inline"><label><input type="checkbox" name="option" value="9"> Coaching (+9 €)</label><label><input type="checkbox" name="option" value="5"> Invité illimité (+5 €)</label></div></fieldset>
+        </form>
+        <div class="estimate" aria-live="polite"><p>Ton abonnement</p><output id="total">0 €/mois</output><p id="detail"></p><a class="btn" href="contact.html?sujet=abonnement&info=Inscription+via+simulateur">Je m'inscris</a></div>
+      </div>
+    </section>
+    <section class="section section--white">
+      <div class="container">
+        <h2>Questions fréquentes</h2>
+        <details><summary>Puis-je résilier à tout moment ?</summary><p>Oui, sans engagement tu résilies en ligne en 2 minutes. Avec 12 mois d'engagement, la résiliation est possible à la fin de la période.</p></details>
+        <details><summary>Que comprend l'essai gratuit ?</summary><p>7 jours d'accès au club de ton choix, avec cours collectifs inclus. Aucune carte bancaire n'est demandée.</p></details>
+        <details><summary>Puis-je m'entraîner dans plusieurs clubs ?</summary><p>Avec Premium et Ultimate, tu accèdes à tous les clubs du réseau. Essentiel donne accès à un seul club.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 FitZone, projet pédagogique EFREI TI504N. Clubs, prix et chiffres fictifs.</p>
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos | FitZone</title>
+  <meta name="description" content="L'équipe et les choix techniques du projet FitZone.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html"><img src="../img/logo.svg" alt="" width="34" height="34">FitZone</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigation principale">
+        <ul class="menu" id="menu">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="page-title">
+      <div class="container">
+        <h1>À propos</h1>
+        <p>Le projet, notre binôme et nos choix techniques.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>L'équipe</h2>
+        <div class="grid">
+          <article class="card reveal">
+            <span class="badge">Binôme 1</span>
+            <h3>Imad-Eddine Mahraz</h3>
+            <p><strong>Rôle : </strong>Architecture globale, page d'accueil, pages Clubs et Cours.</p>
+            <p>Conception de la maquette et de l'arborescence, développement du carrousel interactif, des compteurs déclenchés au scroll, du système de filtrage multicritères et de la réservation de cours sauvegardée via <code>localStorage</code>.</p>
+          </article>
+          <article class="card reveal">
+            <span class="badge badge--blue">Binôme 2</span>
+            <h3>Nassim Baaoui</h3>
+            <p><strong>Rôle : </strong>Design responsive CSS, pages Tarifs, Contact et À propos.</p>
+            <p>Création de la charte graphique et des animations CSS, développement du simulateur d'abonnement en temps réel, du tableau comparatif, de la validation complète du formulaire de contact et du pré-remplissage via URL.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--white">
+      <div class="container">
+        <h2>Le projet</h2>
+        <p>FitZone est un site fictif de salles de sport, réalisé en binôme en HTML5, CSS3 et JavaScript natif (sans framework ni bibliothèque), dans le cadre du module TI504N - TI504NB à l'EFREI.</p>
+        <ul>
+          <li>Design responsive avec media queries, grille CSS Grid et menu burger sur mobile.</li>
+          <li>Carrousel, barre de progression, compteurs déclenchés au scroll, filtres et simulateur de prix en JavaScript.</li>
+          <li>Réservation de cours persistante via <code>localStorage</code> et pré-remplissage intelligent du formulaire via <code>URLSearchParams</code>.</li>
+          <li>Scripts chargés avec <code>defer</code> et isolés par des blocs <code>try/catch</code> pour garantir l'affichage du contenu.</li>
+          <li>Pages validées avec les validateurs HTML et CSS du W3C et code versionné sur GitHub.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 FitZone, projet pédagogique EFREI TI504N. Clubs, prix et chiffres fictifs.</p>
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/a-propos.html" aria-current="page">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

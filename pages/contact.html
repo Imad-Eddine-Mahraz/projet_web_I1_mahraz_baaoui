@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | FitZone</title>
+  <meta name="description" content="Contacte FitZone ou réserve ton essai gratuit.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/contact.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html"><img src="../img/logo.svg" alt="" width="34" height="34">FitZone</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigation principale">
+        <ul class="menu" id="menu">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="page-title">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>Une question, un essai à réserver ? Écris-nous.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container two-col">
+        <form id="contact-form" action="#" novalidate>
+          <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" type="text" autocomplete="name"><p class="error" role="alert"></p></div>
+          <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"><p class="error" role="alert"></p></div>
+          <div class="field"><label for="telephone">Téléphone (facultatif)</label><input id="telephone" name="telephone" type="tel" autocomplete="tel"><p class="error" role="alert"></p></div>
+          <div class="field"><label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet"><option value="">Choisir...</option><option>Réserver un essai gratuit</option><option>Question sur un abonnement</option><option>Problème avec mon compte</option><option>Autre</option></select><p class="error" role="alert"></p></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" maxlength="500"></textarea><p class="hint" id="msg-count">0 / 500</p><p class="error" role="alert"></p></div>
+          <div class="field"><label class="inline"><input type="checkbox" name="rgpd"> J'accepte que mes données servent à répondre à ma demande.</label><p class="error" id="rgpd-error" role="alert"></p></div>
+          <button class="btn" type="submit">Envoyer le message</button>
+          <p class="form-ok" id="form-result" role="status" hidden></p>
+        </form>
+        <aside class="card">
+          <h2>Nous trouver</h2>
+          <p>FitZone Siège<br>12 rue de l'Exemple<br>75000 Paris</p>
+          <p>Service client : du lundi au vendredi, de 9 h à 18 h.</p>
+          <p>Les adresses et numéros de ce site sont fictifs.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 FitZone, projet pédagogique EFREI TI504N. Clubs, prix et chiffres fictifs.</p>
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../pages/clubs.html">Clubs</a></li>
+          <li><a href="../pages/cours.html">Cours</a></li>
+          <li><a href="../pages/tarifs.html">Tarifs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

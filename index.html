@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil | FitZone</title>
+  <meta name="description" content="FitZone, salles de sport sans engagement, ouvertes 24h/24 dans plus de 120 clubs.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="img/logo.svg" alt="" width="34" height="34">FitZone</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="pages/clubs.html">Clubs</a></li>
+        <li><a href="pages/cours.html">Cours</a></li>
+        <li><a href="pages/tarifs.html">Tarifs</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="hero">
+      <div class="container">
+        <h1>Plus fort<br>chaque semaine</h1>
+        <p>FitZone, c'est 120 clubs, des machines neuves et un abonnement à partir de 19,99 € par mois. Teste gratuitement pendant 7 jours.</p>
+        <div class="actions">
+          <a class="btn" href="pages/tarifs.html">Voir les tarifs</a>
+          <a class="btn btn--ghost" href="pages/clubs.html">Trouver mon club</a>
+        </div>
+        <div class="barbell" aria-hidden="true">
+          <div class="plates plates--left"><span class="plate"></span><span class="plate"></span><span class="plate"></span></div>
+          <div class="bar"></div>
+          <div class="plates"><span class="plate"></span><span class="plate"></span><span class="plate"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container stats">
+        <div class="stat"><strong data-count="120">120</strong>clubs en France</div>
+        <div class="stat"><strong data-count="350000">350 000</strong>membres</div>
+        <div class="stat"><strong data-count="300">300</strong>cours par semaine</div>
+        <div class="stat"><strong data-count="24">24</strong>heures sur 24 dans les clubs 24/7</div>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <h2>Ce qu'on te propose</h2>
+        <div class="carousel" id="carousel" role="region" aria-roledescription="carrousel" aria-label="Nos points forts">
+          <figure class="slide active"><img src="img/slide-muscu.svg" alt="Barre de musculation chargée de disques" width="800" height="400"><figcaption><h3>Un plateau musculation complet</h3><p>Barres, haltères jusqu'à 60 kg, racks et machines guidées.</p></figcaption></figure>
+          <figure class="slide"><img src="img/slide-cours.svg" alt="Silhouette en mouvement pendant un cours collectif" width="800" height="400"><figcaption><h3>Des cours pour tous les niveaux</h3><p>Du renforcement musculaire au yoga, avec des coachs diplômés.</p></figcaption></figure>
+          <figure class="slide"><img src="img/slide-24h.svg" alt="Horloge et courbe de rythme cardiaque" width="800" height="400"><figcaption><h3>Ouvert quand ça t'arrange</h3><p>Dans nos clubs 24/7, tu t'entraînes à n'importe quelle heure.</p></figcaption></figure>
+          <button class="c-btn c-prev" type="button" aria-label="Diapositive précédente">‹</button>
+          <button class="c-btn c-next" type="button" aria-label="Diapositive suivante">›</button>
+          <div class="dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Pourquoi FitZone</h2>
+        <div class="grid">
+        <article class="card reveal"><h3>Ouvert 24h/24</h3><p>Les clubs 24/7 s'ouvrent avec ton badge ou ton téléphone, même à 5 h du matin.</p></article>
+        <article class="card reveal"><h3>Sans engagement</h3><p>Résilie en ligne quand tu veux, sans frais cachés ni justificatif.</p></article>
+        <article class="card reveal"><h3>Plus de 300 cours</h3><p>Cardio, renforcement, yoga, boxe : réserve ta place depuis l'appli.</p></article>
+        <article class="card reveal"><h3>Un coach si tu veux</h3><p>Un bilan offert à l'inscription et des programmes adaptés à ton niveau.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>7 jours d'essai, sans carte bancaire</h2>
+        <p>Choisis ton club, viens t'entraîner et décide ensuite.</p>
+        <div class="actions"><a class="btn" href="pages/contact.html">Réserver mon essai</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 FitZone, projet pédagogique EFREI TI504N. Clubs, prix et chiffres fictifs.</p>
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="pages/clubs.html">Clubs</a></li>
+      <li><a href="pages/cours.html">Cours</a></li>
+      <li><a href="pages/tarifs.html">Tarifs</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+      <li><a href="pages/a-propos.html">À propos</a></li>
+    </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
